@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+ 
+  }
+  #main-content {
+     overflow-y: scroll;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      opacity: 1;
+   
+    
+  }
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+    flex-wrap: wrap;
+    background: #000;
+    height: 10vh;
+}
+nav .logo{
+    color: rgb(247, 233, 233);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 13px;
+}
+nav .home-coordinates{
+    color: rgb(247, 233, 233);
+    letter-spacing: 0.2rem;
+    
+    
+}
+nav .home-coordinates .home-coordinates-tooltip{
+    color: rgb(247, 233, 233);
+    position: relative;
+    left: -13rem;
+}
+nav .nav-links{
+    display: flex;
+    justify-content: space-between;
+   
+    width: 25rem;
+    list-style: none;
+    
+}
+nav .nav-links a{
+    color: rgb(247, 233, 233);
+    text-decoration: none;
+    letter-spacing: 0.04rem;
+    font-size: 14px;
+    font-weight: 50rem;;
+}
+nav .message-container span{
+    position:  fixed;
+    top: 3.3rem;
+    right:  0;
+    
+}
+nav .message-container{
+    color: rgb(247, 233, 233);
+}
+nav .menu-btn{
+ display: none;
+}
+nav .menu-btn div{
+    
+    width: 20px;
+    height: 3px;
+    margin: 3px;
+    background-color:  rgb(247, 233, 233);
+    
+}
+@media screen and  (max-width:94px)
+{
+    nav  .home-coordinates{
+        position: relative;
+        left: 5rem;
+        
+
+    }
+    nav .nav-links{
+        position: relative;
+        left: -2rem;
+    }
+}
+
+@media screen and  (max-width:1172px)
+{
+
+nav .home-coordinates{
+    position: relative;
+    left: 5rem;
+}
+
+}
+@media screen and  (max-width:996px){
+    nav .home-coordinates{
+        position: relative;
+        left: 2rem;
+    }
+
+}
+nav .nav-links{
+    position: relative;
+    left: -2rem;
+}
+
+@media screen and  (max-width:941px)
+{
+    nav .home-coordinates{
+        display: none;
+    }
+}
+
+@media screen and  (max-width:531px)
+{
+    nav .nav-links{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+        position: absolute;
+        left: 16.5rem;
+        width: 50%;
+        top:7vh;
+        height: 90vh;
+        background-color: #000;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+
+    nav .nav-links li{
+        opacity: 0;
+    }
+    nav .menu-btn{
+        display: block;
+        cursor: pointer;
+       }
+       nav .message-container{
+           display: none;
+       }
+   
+        
+}
+.nav-active {
+    transform: translateX(0%);
+}
+
+.home-wrapper{
+    border: 1px solid red;
+    position: relative;
+    height: 100%;
+ 
+    
+}
+.home-wrapper .row{
+    display: flex;
+}
+
+.home-wrapper .row .col-half{ 
+    width: 50%;
+    height: 100vh;
+   
+}
+
+.home-wrapper .row .col2{
+    background: url("img/pic.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.home-wrapper .row .half-home-wrap {
+    position:absolute;
+    left:2%;
+    z-index:10;
+    top:10%;
+   
+   }
+   .home-wrapper .row .half-home-wrap h1 {
+    color:#000;
+    font-family:poppins,sans-serif;
+    font-size:50px;
+    text-align:left;
+    font-weight:600;
+    line-height:65px;
+    
+    position:relative
+   }
+   .half-home-wrap h1 span {
+    color:#e8491d
+   }
+   
+   .half-home-wrap h4 {
+    padding:15px 30px;
+    background:rgba(0,0,0,.20);
+    text-align:left;
+    font-size:10px;
+    float:left;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-weight:600
+   }
+
+   .home-wrapper .btn {
+    
+    position: absolute;
+    left: 10px;
+    top: 21rem;
+    padding: 15px 30px;
+    
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.36);
+    color: #000;
+    background: #e8491d;
+    border-color: transparent;
+    z-index: 99;
+  }
